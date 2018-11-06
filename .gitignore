@@ -18,3 +18,5 @@ application/logs/*
 application/config/database.php
 application/config/config.php
 application/libraries/WS.php
+
+application/language/
