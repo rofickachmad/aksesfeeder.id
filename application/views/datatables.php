@@ -8,7 +8,7 @@
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -19,46 +19,30 @@
 	<body>
 		<h1 class="text-center">Hello World</h1>
 
-<table class="table table-hover" id="example" style="width:100%">
-		<thead>
-			<tr>
-				<th>No</th>
-				<th>id_aktivitas</th>
-			    <th>jenis_anggota</th>
-			    <th>nama_jenis_anggota</th>
-			    <th>id_jenis_aktivitas</th>
-			    <th>nama_jenis_aktivitas</th>
-			<!--     <th>id_prodi</th>
-			    <th>nama_prodi</th>
-			    <th>id_semester</th>
-			    <th>nama_semester</th>
-			    <th>judul</th>
-			    <th>keterangan</th>
-			    <th>lokasi</th>
-			    <th>sk_tugas</th>
-			    <th>tanggal_sk_tugas</th> -->
-			</tr>
-		</thead>
-		<tfoot>
-			<tr>
-				<td>No</td>
-				<td>id_aktivitas</td>
-			    <td>jenis_anggota</td>
-			    <td>nama_jenis_anggota</td>
-			    <td>id_jenis_aktivitas</td>
-			    <td>nama_jenis_aktivitas</td>
-			  <!--   <td>id_prodi</td>
-			    <td>nama_prodi</td>
-			    <td>id_semester</td>
-			    <td>nama_semester</td>
-			    <td>judul</td>
-			    <td>keterangan</td>
-			    <td>lokasi</td>
-			    <td>sk_tugas</td>
-			    <td>tanggal_sk_tugas</td> -->
-			</tr>
-		</tfoot>
-	</table>
+	
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+      
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     
@@ -69,13 +53,7 @@
     	
 	
 	$(document).ready(function() {
-    $('#example').DataTable( {
-        // "processing": true,
-        // "serverSide": true,
-        "ajax":{
-        	 "draw": 1,
-  "recordsTotal": 57,
-  "recordsFiltered": 57,
+    	$('#example').DataTable({"ajax":{
   "data": [
     [
       "Tiger Nixon",
@@ -117,34 +95,427 @@
       "2008/11/28",
       "$162,700"
     ],
-
- 
+    [
+      "Brielle Williamson",
+      "Integration Specialist",
+      "New York",
+      "4804",
+      "2012/12/02",
+      "$372,000"
+    ],
+    [
+      "Herrod Chandler",
+      "Sales Assistant",
+      "San Francisco",
+      "9608",
+      "2012/08/06",
+      "$137,500"
+    ],
+    [
+      "Rhona Davidson",
+      "Integration Specialist",
+      "Tokyo",
+      "6200",
+      "2010/10/14",
+      "$327,900"
+    ],
+    [
+      "Colleen Hurst",
+      "Javascript Developer",
+      "San Francisco",
+      "2360",
+      "2009/09/15",
+      "$205,500"
+    ],
+    [
+      "Sonya Frost",
+      "Software Engineer",
+      "Edinburgh",
+      "1667",
+      "2008/12/13",
+      "$103,600"
+    ],
+    [
+      "Jena Gaines",
+      "Office Manager",
+      "London",
+      "3814",
+      "2008/12/19",
+      "$90,560"
+    ],
+    [
+      "Quinn Flynn",
+      "Support Lead",
+      "Edinburgh",
+      "9497",
+      "2013/03/03",
+      "$342,000"
+    ],
+    [
+      "Charde Marshall",
+      "Regional Director",
+      "San Francisco",
+      "6741",
+      "2008/10/16",
+      "$470,600"
+    ],
+    [
+      "Haley Kennedy",
+      "Senior Marketing Designer",
+      "London",
+      "3597",
+      "2012/12/18",
+      "$313,500"
+    ],
+    [
+      "Tatyana Fitzpatrick",
+      "Regional Director",
+      "London",
+      "1965",
+      "2010/03/17",
+      "$385,750"
+    ],
+    [
+      "Michael Silva",
+      "Marketing Designer",
+      "London",
+      "1581",
+      "2012/11/27",
+      "$198,500"
+    ],
+    [
+      "Paul Byrd",
+      "Chief Financial Officer (CFO)",
+      "New York",
+      "3059",
+      "2010/06/09",
+      "$725,000"
+    ],
+    [
+      "Gloria Little",
+      "Systems Administrator",
+      "New York",
+      "1721",
+      "2009/04/10",
+      "$237,500"
+    ],
+    [
+      "Bradley Greer",
+      "Software Engineer",
+      "London",
+      "2558",
+      "2012/10/13",
+      "$132,000"
+    ],
+    [
+      "Dai Rios",
+      "Personnel Lead",
+      "Edinburgh",
+      "2290",
+      "2012/09/26",
+      "$217,500"
+    ],
+    [
+      "Jenette Caldwell",
+      "Development Lead",
+      "New York",
+      "1937",
+      "2011/09/03",
+      "$345,000"
+    ],
+    [
+      "Yuri Berry",
+      "Chief Marketing Officer (CMO)",
+      "New York",
+      "6154",
+      "2009/06/25",
+      "$675,000"
+    ],
+    [
+      "Caesar Vance",
+      "Pre-Sales Support",
+      "New York",
+      "8330",
+      "2011/12/12",
+      "$106,450"
+    ],
+    [
+      "Doris Wilder",
+      "Sales Assistant",
+      "Sidney",
+      "3023",
+      "2010/09/20",
+      "$85,600"
+    ],
+    [
+      "Angelica Ramos",
+      "Chief Executive Officer (CEO)",
+      "London",
+      "5797",
+      "2009/10/09",
+      "$1,200,000"
+    ],
+    [
+      "Gavin Joyce",
+      "Developer",
+      "Edinburgh",
+      "8822",
+      "2010/12/22",
+      "$92,575"
+    ],
+    [
+      "Jennifer Chang",
+      "Regional Director",
+      "Singapore",
+      "9239",
+      "2010/11/14",
+      "$357,650"
+    ],
+    [
+      "Brenden Wagner",
+      "Software Engineer",
+      "San Francisco",
+      "1314",
+      "2011/06/07",
+      "$206,850"
+    ],
+    [
+      "Fiona Green",
+      "Chief Operating Officer (COO)",
+      "San Francisco",
+      "2947",
+      "2010/03/11",
+      "$850,000"
+    ],
+    [
+      "Shou Itou",
+      "Regional Marketing",
+      "Tokyo",
+      "8899",
+      "2011/08/14",
+      "$163,000"
+    ],
+    [
+      "Michelle House",
+      "Integration Specialist",
+      "Sidney",
+      "2769",
+      "2011/06/02",
+      "$95,400"
+    ],
+    [
+      "Suki Burks",
+      "Developer",
+      "London",
+      "6832",
+      "2009/10/22",
+      "$114,500"
+    ],
+    [
+      "Prescott Bartlett",
+      "Technical Author",
+      "London",
+      "3606",
+      "2011/05/07",
+      "$145,000"
+    ],
+    [
+      "Gavin Cortez",
+      "Team Leader",
+      "San Francisco",
+      "2860",
+      "2008/10/26",
+      "$235,500"
+    ],
+    [
+      "Martena Mccray",
+      "Post-Sales support",
+      "Edinburgh",
+      "8240",
+      "2011/03/09",
+      "$324,050"
+    ],
+    [
+      "Unity Butler",
+      "Marketing Designer",
+      "San Francisco",
+      "5384",
+      "2009/12/09",
+      "$85,675"
+    ],
+    [
+      "Howard Hatfield",
+      "Office Manager",
+      "San Francisco",
+      "7031",
+      "2008/12/16",
+      "$164,500"
+    ],
+    [
+      "Hope Fuentes",
+      "Secretary",
+      "San Francisco",
+      "6318",
+      "2010/02/12",
+      "$109,850"
+    ],
+    [
+      "Vivian Harrell",
+      "Financial Controller",
+      "San Francisco",
+      "9422",
+      "2009/02/14",
+      "$452,500"
+    ],
+    [
+      "Timothy Mooney",
+      "Office Manager",
+      "London",
+      "7580",
+      "2008/12/11",
+      "$136,200"
+    ],
+    [
+      "Jackson Bradshaw",
+      "Director",
+      "New York",
+      "1042",
+      "2008/09/26",
+      "$645,750"
+    ],
+    [
+      "Olivia Liang",
+      "Support Engineer",
+      "Singapore",
+      "2120",
+      "2011/02/03",
+      "$234,500"
+    ],
+    [
+      "Bruno Nash",
+      "Software Engineer",
+      "London",
+      "6222",
+      "2011/05/03",
+      "$163,500"
+    ],
+    [
+      "Sakura Yamamoto",
+      "Support Engineer",
+      "Tokyo",
+      "9383",
+      "2009/08/19",
+      "$139,575"
+    ],
+    [
+      "Thor Walton",
+      "Developer",
+      "New York",
+      "8327",
+      "2013/08/11",
+      "$98,540"
+    ],
+    [
+      "Finn Camacho",
+      "Support Engineer",
+      "San Francisco",
+      "2927",
+      "2009/07/07",
+      "$87,500"
+    ],
+    [
+      "Serge Baldwin",
+      "Data Coordinator",
+      "Singapore",
+      "8352",
+      "2012/04/09",
+      "$138,575"
+    ],
+    [
+      "Zenaida Frank",
+      "Software Engineer",
+      "New York",
+      "7439",
+      "2010/01/04",
+      "$125,250"
+    ],
+    [
+      "Zorita Serrano",
+      "Software Engineer",
+      "San Francisco",
+      "4389",
+      "2012/06/01",
+      "$115,000"
+    ],
+    [
+      "Jennifer Acosta",
+      "Junior Javascript Developer",
+      "Edinburgh",
+      "3431",
+      "2013/02/01",
+      "$75,650"
+    ],
+    [
+      "Cara Stevens",
+      "Sales Assistant",
+      "New York",
+      "3990",
+      "2011/12/06",
+      "$145,600"
+    ],
+    [
+      "Hermione Butler",
+      "Regional Director",
+      "London",
+      "1016",
+      "2011/03/21",
+      "$356,250"
+    ],
+    [
+      "Lael Greer",
+      "Systems Administrator",
+      "London",
+      "6733",
+      "2009/02/27",
+      "$103,500"
+    ],
+    [
+      "Jonas Alexander",
+      "Developer",
+      "San Francisco",
+      "8196",
+      "2010/07/14",
+      "$86,500"
+    ],
+    [
+      "Shad Decker",
+      "Regional Director",
+      "Edinburgh",
+      "6373",
+      "2008/11/13",
+      "$183,000"
+    ],
+    [
+      "Michael Bruce",
+      "Javascript Developer",
+      "Singapore",
+      "5384",
+      "2011/06/27",
+      "$183,000"
+    ],
+    [
+      "Donna Snider",
+      "Customer Support",
+      "New York",
+      "4226",
+      "2011/01/25",
+      "$112,000"
+    ]
   ]
 }
-        // "ajax":{"data":[{"id_aktivitas":"b1ea049e-3423-49be-8466-4266ae7c59b1","jenis_anggota":"1","nama_jenis_anggota":"Kelompok","id_jenis_aktivitas":"5","nama_jenis_aktivitas":"Kuliah kerja nyata","id_prodi":"ae57e8ff-6ca3-4e2f-8dfd-4e31c32d3d96","nama_prodi":"S1 Ilmu Administrasi Niaga","id_semester":"20162","nama_semester":"2016\/2017 Genap","judul":"USAHA MIKRO KEMASYARAKATAN DAN PENDIDIKAN","keterangan":null,"lokasi":"Kecamatan Jenggawah","sk_tugas":"41\/STIA.P.JBR\/S.4\/II\/2017","tanggal_sk_tugas":"2017-02-20"},{"id_aktivitas":"bd5aa216-11f9-457e-840a-770c8a2415a8","jenis_anggota":"1","nama_jenis_anggota":"Kelompok","id_jenis_aktivitas":"5","nama_jenis_aktivitas":"Kuliah kerja nyata","id_prodi":"0ce96b29-3b0d-4482-8f50-a2c3af106276","nama_prodi":"S1 Pendidikan Bahasa Inggris","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"Kuliah Kerja Nyata di Kecamatan Sengah Temila","keterangan":"2017-1","lokasi":"Sengah Temila","sk_tugas":"069\/Ket.STKIP Pata\/dpl-ppl.kkn\/vii\/2017","tanggal_sk_tugas":"2017-07-20"},{"id_aktivitas":"093296cd-6121-4386-afc0-e141b48c2051","jenis_anggota":"1","nama_jenis_anggota":"Kelompok","id_jenis_aktivitas":"5","nama_jenis_aktivitas":"Kuliah kerja nyata","id_prodi":"49e32bb3-11b8-48f7-bc65-0241b8573fe6","nama_prodi":"S1 Pendidikan Matematika","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"Kuliah Kerja Nyata di Kecamatan Sengah Temila","keterangan":"2017-1","lokasi":"Sengah Temila","sk_tugas":"069\/Ket.STKIP Pata\/dpl-ppl.kkn\/vii\/2017","tanggal_sk_tugas":"2017-07-20"},{"id_aktivitas":"c01a75fc-a8cd-42e1-b981-5377b5513144","jenis_anggota":"1","nama_jenis_anggota":"Kelompok","id_jenis_aktivitas":"5","nama_jenis_aktivitas":"Kuliah kerja nyata","id_prodi":"de3a9bbc-91c0-4491-ad21-b34bc4e3d0b8","nama_prodi":"S1 Pendidikan Jasmani, Kesehatan & Rekreasi","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"Kuliah Kerja Nyata di Kecamatan Sengah Temila","keterangan":"2017-1","lokasi":"Sengah Temila","sk_tugas":"069\/Ket.STKIP Pata\/dpl-ppl.kkn\/vii\/2017","tanggal_sk_tugas":"2017-07-20"},{"id_aktivitas":"bb5471e8-2851-4d39-9dc1-707c41183b52","jenis_anggota":"1","nama_jenis_anggota":"Kelompok","id_jenis_aktivitas":"6","nama_jenis_aktivitas":"Kerja praktek\/PKL","id_prodi":"0ce96b29-3b0d-4482-8f50-a2c3af106276","nama_prodi":"S1 Pendidikan Bahasa Inggris","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"PPL-2","keterangan":"2017-1","lokasi":"Sengah Temila","sk_tugas":"069\/Ket.STKIP Pata\/dpl-ppl.kkn\/vii\/2017","tanggal_sk_tugas":"2017-07-20"},{"id_aktivitas":"4fdaf091-a7d7-4b62-8f67-85942858b78c","jenis_anggota":"0","nama_jenis_anggota":"Personal","id_jenis_aktivitas":"6","nama_jenis_aktivitas":"Kerja praktek\/PKL","id_prodi":"49e32bb3-11b8-48f7-bc65-0241b8573fe6","nama_prodi":"S1 Pendidikan Matematika","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"PPL-2","keterangan":"2017-1","lokasi":"Sengah Temila","sk_tugas":"069\/Ket.STKIP Pata\/dpl-ppl.kkn\/vii\/2017","tanggal_sk_tugas":"2017-07-20"},{"id_aktivitas":"bd85475f-a1b0-4e38-8dd3-b423abf181a3","jenis_anggota":"0","nama_jenis_anggota":"Personal","id_jenis_aktivitas":"2","nama_jenis_aktivitas":"Tugas akhir","id_prodi":"de3a9bbc-91c0-4491-ad21-b34bc4e3d0b8","nama_prodi":"S1 Pendidikan Jasmani, Kesehatan & Rekreasi","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"SKRIPSI","keterangan":"2017-1","lokasi":null,"sk_tugas":"082\/Ket.STKIP PaTa\/PSM\/IX\/2017","tanggal_sk_tugas":"2017-09-14"},{"id_aktivitas":"9eb2e542-5bec-4d9c-8456-318538e9e6e3","jenis_anggota":"0","nama_jenis_anggota":"Personal","id_jenis_aktivitas":"2","nama_jenis_aktivitas":"Tugas akhir","id_prodi":"0ce96b29-3b0d-4482-8f50-a2c3af106276","nama_prodi":"S1 Pendidikan Bahasa Inggris","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"SKRIPSI","keterangan":"2017-1","lokasi":null,"sk_tugas":"081\/Ket.STKIP PaTa\/PSM\/IX\/2017","tanggal_sk_tugas":"2017-09-14"},{"id_aktivitas":"f02365db-9f82-424c-a1ff-2b398f1bf69e","jenis_anggota":"0","nama_jenis_anggota":"Personal","id_jenis_aktivitas":"2","nama_jenis_aktivitas":"Tugas akhir","id_prodi":"49e32bb3-11b8-48f7-bc65-0241b8573fe6","nama_prodi":"S1 Pendidikan Matematika","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"SKRIPSI","keterangan":"2017-1","lokasi":null,"sk_tugas":"083\/Ket.STKIP PaTa\/PSM\/IX\/2017","tanggal_sk_tugas":"2017-09-14"},{"id_aktivitas":"b54998ae-efa1-4ade-b926-4c05d353ccbb","jenis_anggota":"0","nama_jenis_anggota":"Personal","id_jenis_aktivitas":"2","nama_jenis_aktivitas":"Tugas akhir","id_prodi":"49e32bb3-11b8-48f7-bc65-0241b8573fe6","nama_prodi":"S1 Pendidikan Matematika","id_semester":"20171","nama_semester":"2017\/2018 Ganjil","judul":"SKRIPSI","keterangan":"2017-1","lokasi":null,"sk_tugas":"083\/Ket.STKIP PaTa\/PSM\/IX\/2017","tanggal_sk_tugas":"2017-09-14"}]},
-        /*"columns": [
-            {"data":"id_aktivitas"},
-			    {"data":"jenis_anggota"},
-			    {"data":"nama_jenis_anggota"},
-			    {"data":"id_jenis_aktivitas"},
-			    {"data":"nama_jenis_aktivitas"},
-			    {"data":"id_prodi"},
-			    {"data":"nama_prodi"},
-			    {"data":"id_semester"},
-			    {"data":"nama_semester"},
-			    {"data":"judul"},
-			    {"data":"keterangan"},
-			    {"data":"lokasi"},
-			    {"data":"sk_tugas"},
-			    {"data":"tanggal_sk_tugas"}
-           
-        ]*/
-        /*"ajax": {
-            // "data": ,
-            "dataType": "json"
-        }*/
-    } );
-} );
+		});
+    }
+      
 
 
 </script>
